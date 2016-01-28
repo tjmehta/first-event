@@ -1,0 +1,41 @@
+{
+  "name": "first-event",
+  "version": "1.0.0",
+  "description": "Race event-emitter events, resolves the first to occur. Promise-based ee-first",
+  "main": "index.js",
+  "scripts": {
+    "test": "lab --assert code --threshold 100"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tjmehta/first-event.git"
+  },
+  "keywords": [
+    "event",
+    "emitter",
+    "eventemitter",
+    "events",
+    "first",
+    "race",
+    "handler",
+    "ee",
+    "ee-first",
+    "ee-first-promise",
+    "promise"
+  ],
+  "author": "Tejesh Mehta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tjmehta/first-event/issues"
+  },
+  "homepage": "https://github.com/tjmehta/first-event",
+  "devDependencies": {
+    "code": "^1.5.0",
+    "lab": "^6.2.0",
+    "standard": "^5.4.1"
+  },
+  "dependencies": {
+    "101": "^1.2.0",
+    "assert-args": "^1.0.3"
+  }
+}
