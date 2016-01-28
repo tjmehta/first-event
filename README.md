@@ -19,7 +19,8 @@ first(ee, ['error', 'foo', 'bar'])
   })
 
 ee.emit('error', new Error('boom'))
-// below does nothing, bc it happenned second
+// below does nothing, because 'foo' event emitted after 'error' event and first-event ignores all
+// events after the first event.
 ee.emit('foo', 1)
 ```
 #### Event Example
@@ -35,7 +36,8 @@ first(ee, ['error', 'foo', 'bar'])
   })
 
 ee.emit('foo', 'one', 'two', 'three')
-// below does nothing, bc it happenned second
+// below does nothing, because 'bar' event emitted after 'foo' event and first-event ignores all
+// events after the first event.
 ee.emit('bar', 1)
 ```
 #### Race Events from different EventEmitters
@@ -54,7 +56,8 @@ Promise.race(
 })
 
 ee2.emit('foo', 'one', 'two', 'three')
-// below does nothing, bc it happenned second
+// below does nothing, because 'bar' event emitted after 'foo' event and first-event ignores all
+// events after the first event.
 ee.emit('bar', 1)
 ```
 ### Cancel
@@ -65,9 +68,9 @@ var eventPromise = first(ee, ['error', 'foo', 'bar'])
 
 eventPromise
   .then(function (data) {
-    // never happens, bc event handlers were cancelled below
+    // never happens, because event handlers are cancelled below
   }).catch(function () {
-    // never happens, bc event handlers were cancelled below
+    // never happens, because event handlers are cancelled below
   })
 
 // cancel and cleanup event handlers
