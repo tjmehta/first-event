@@ -66,7 +66,7 @@ function firstEvent (ee, events) {
  * @param  {Object} handlers - handlers map, ex: { '<event>': function handler () {...} ... }
  */
 function removeListeners (ee, handlers) {
-  // remove allListeners
+  // remove all listeners
   Object.keys(handlers).forEach(function (event) {
     ee.removeListener(event, handlers[event])
     delete handlers[event]
