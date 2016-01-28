@@ -2,6 +2,7 @@ var EventEmitter = require('events').EventEmitter
 
 var Code = require('code')
 var Lab = require('lab')
+global.Promise = global.Promise || require('promise-polyfill')
 
 var first = require('../index')
 
