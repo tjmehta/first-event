@@ -10,14 +10,13 @@ var lab = exports.lab = Lab.script()
 var describe = lab.describe
 var it = lab.it
 
-
 describe('first-event', function () {
-  describe('invalid args', function() {
+  describe('invalid args', function () {
     it('should error if not given string events', function (done) {
       var ee = new EventEmitter()
 
       expect(function () {
-        first(ee, [1,2,2])
+        first(ee, [1, 2, 2])
       }).to.throw('"events" must be an array of strings')
 
       done()
@@ -32,7 +31,7 @@ describe('first-event', function () {
       .then(function (firstEvent) {
         expect(firstEvent.ee).to.equal(ee)
         expect(firstEvent.event).to.equal(event)
-        expect(firstEvent.args).to.deep.equal([1,2,3])
+        expect(firstEvent.args).to.deep.equal([1, 2, 3])
         done()
       })
       .catch(done)
@@ -43,7 +42,6 @@ describe('first-event', function () {
   })
 
   it('should reject to error', function (done) {
-    var event = 'foo'
     var err = new Error('boom')
     var ee = new EventEmitter()
 
@@ -63,7 +61,6 @@ describe('first-event', function () {
   })
 
   it('should cancel', function (done) {
-    var event = 'foo'
     var ee = new EventEmitter()
     var promise = first(ee, ['foo', 'bar'])
 

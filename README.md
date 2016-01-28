@@ -1,4 +1,4 @@
-# first-event
+# first-event [![Build Status](https://travis-ci.org/tjmehta/first-event.svg?branch=master)](https://travis-ci.org/tjmehta/first-event) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)
 Race event-emitter events, resolves the first to occur. Promise-based [ee-first](https://github.com/jonathanong/ee-first)
 
 # Installation

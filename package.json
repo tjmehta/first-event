@@ -4,7 +4,8 @@
   "description": "Race event-emitter events, resolves the first to occur. Promise-based ee-first",
   "main": "index.js",
   "scripts": {
-    "test": "lab --assert code --threshold 100"
+    "test": "lab --assert code --threshold 100",
+    "lint": "standard"
   },
   "repository": {
     "type": "git",
