@@ -1,11 +1,12 @@
 {
   "name": "first-event",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Race event-emitter events, resolves the first to occur. Promise-based ee-first",
   "main": "index.js",
   "scripts": {
     "test": "lab --assert code --threshold 100",
-    "lint": "standard"
+    "lint": "standard",
+    "format": "standard --format"
   },
   "repository": {
     "type": "git",
